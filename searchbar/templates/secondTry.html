@@ -1,0 +1,276 @@
+{% load static %}
+<html>
+<head>
+  <video playsinline autoplay muted loop poster class="videoback">
+    <source src="{% static './vids/pexels-olya-kobruseva-6800641.mp4' %}" type="video/webm">
+  </video>
+
+
+  <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+
+  <div id="image-banner">
+    <video playsinline autoplay muted loop poster  class='userVideo' >
+      <source src="{% static './vids/Pexels Videos 1292466.mp4' %}" type="video/webm">
+    </video>
+
+  </div>
+
+  <div id="reading_video" data-aos="flip-down">
+  <video playsinline autoplay muted loop poster  class='readingVideo' width="1000px">
+    <source src="{% static './vids/video (1).mp4'%}" type="video/webm">
+      </video>
+    </div>
+
+
+
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+
+
+      <link rel="stylesheet" href="{% static './css/seconddesign.css' %}">
+  <title> My website </title>
+
+
+    </div>
+
+<head>
+<body>
+
+
+  <div class="sample-section-wrap">
+    <div class="sample-section">
+
+    </div>
+  </div>
+
+<div id="upper">
+
+
+<header>
+
+	<h1>Back <span> to </span> Book </h1>
+	<img src="http://pngimg.com/uploads/book/book_PNG51114.png" >
+
+</header>
+<main>
+
+  <nav>
+    <h2>What are you looking for ?</h2>
+     <input id="toggle" type="checkbox" checked>
+  <ul>
+    <li><a href="accounts/SECONDPAGE">About us</a></li>
+    <li><a href="accounts/index">Search for books</a></li>
+    {% if user.is_authenticated %}
+    <li><a href="accounts/logout">Logout</a></li>
+    {% else %}
+    <li><a href="accounts/register">Register</a></li>
+    <li><a href="accounts/login">Login</a></li>
+    {% endif %}
+  </ul>
+  </nav>
+</main>
+
+</div>
+
+
+
+<div id="background-wrapper">
+  <div data-aos="zoom-in-down">
+	<div class="bgpage1"></div>
+    <div class="bgpage2"></div>
+  </div>
+    <div data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
+    <div class="bgpage3"></div>
+    <div class="bgpage4"></div>
+      </div>
+    <div class="bgpage5"></div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="wrapper">
+    <div id="container-2">
+
+        <h3> First book exchange<br> website in Albania </h3>
+    </div>
+</div>
+
+
+<!-- Container for the image gallery -->
+<div class="container" >
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides" data-aos="flip-up">
+    <div class="numbertext">1 / 3</div>
+      <img src= "https://images.pexels.com/photos/6035423/pexels-photo-6035423.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"   style="height:100%; width:100%" >
+
+
+      <div class="overlay">
+        <div class="text">
+          <h2> How does it work </h2>
+    <ol>
+      <li>Type in books you want to give away</li>
+      <li> Receive requests from others for your books </li>
+      <li> Mail your books and receive discount cupons or free books </li>
+      <li> Ask for books from others with your points or discount </li>
+    <ol>
+
+
+        </div>
+      </div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+      <img src="https://images.pexels.com/photos/7105980/pexels-photo-7105980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="height:100%; width:100%">
+      <div class="overlay">
+        <div class="text">
+          <p>
+            Browse books by topic, country/language, most wishlisted books, most available books and more
+          </p>
+
+
+        </div>
+      </div>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 3</div>
+      <img src="https://images.pexels.com/photos/5855578/pexels-photo-5855578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="height:100%; width:100%">
+      <div class="overlay">
+        <div class="text">
+        <p> Swapping books saves you time, money, shelf space and the environment. </p>
+        </div>
+      </div>
+  </div>
+
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+
+
+
+
+
+
+
+<script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+</script>
+
+<script>
+  AOS.init({
+  duration: 1500,
+});
+</script>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<!-- Header -->
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<div data-aos="fade-up-right">
+<figure class="snip1574"  >
+  <img src="https://images.pexels.com/photos/6008360/pexels-photo-6008360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="profile-sample2" />
+  <figcaption>
+    <blockquote>
+      <p>I am a mystery lover and I feel I have saved a lot of money here. I have also ordered cookbooks (another thing I like to do. Just grateful that I found you</p>
+    </blockquote>
+    <h3>Sue Shei</h3>
+    <h5>Member</h5>
+  </figcaption>
+</figure>
+</div>
+<div data-aos="fade-up-left">
+<figure class="snip1574"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample37.jpg" alt="profile-sample7" />
+  <figcaption>
+    <blockquote>
+      <p> So easy to use, it feeds my love of reading & enables me to save money while feeding my addiction.</p>
+    </blockquote>
+    <h3>Will Barrow</h3>
+    <h5>Member</h5>
+  </figcaption>
+</figure>
+<figure class="snip1574"><img src="https://images.pexels.com/photos/1975781/pexels-photo-1975781.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="profile-sample6" />
+  <figcaption>
+    <blockquote>
+      <p>"Swapping books here is so fun and exciting! I feel like the world is my bookshelf!" </p>
+    </blockquote>
+    <h3>Indigo Violet</h3>
+    <h5>Member</h5>
+  </figcaption>
+</figure>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<h1>Search Results</h1>
+
+<ul>
+  {% for books in object_list %}
+    <li>
+      {{ book_search.name }}, {{ book_search.state }}
+    </li>
+  {% endfor %}
+</ul>
