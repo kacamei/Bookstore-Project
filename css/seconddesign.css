@@ -1,0 +1,705 @@
+
+#reading_video{
+  margin-top: 10px;
+  height: 0px;
+  border-radius: 0px;
+  position: absolute;
+  margin-bottom: 25px;
+  z-index: -1;
+}
+
+.readingVideo{
+  position: absolute;
+  height: 800px;
+  margin-top: 700px;
+
+
+
+}
+
+.userVideo{
+
+     position: relative;
+  height:auto;
+    width: 2000;
+     z-index: 0;
+
+
+}
+#image-banner{
+  margin-top: 0px;
+  height: 200px;
+
+  border-radius: 5px;
+
+  position: relative;
+  margin-bottom: 25px;
+}
+
+nav {
+  margin: auto;
+  margin-top: 3px;
+  position: relative;
+  width: 50vw;
+  min-width: 320px;
+  height: 200px;
+  float: left;
+
+
+}
+
+
+
+nav h2 {
+  border-radius: 2px;
+  position: relative;
+  background: #ded1c2;
+  height: 40px;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 100;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 4px 20px -2px rgba(0,0,0,.35);
+  transition: all .4s;
+
+}
+
+nav:hover h2{
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px -1px rgba(0,0,0,.35);
+ }
+nav:hover:active h2{
+  transform: translateY(10px);
+  box-shadow: 0px -1px 2px 0px rgba(0,0,0,.35);
+ }
+
+input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  height: 40px;
+}
+
+#toggle:checked ~ul {
+  height: 0%;
+}
+
+nav ul {
+  padding-left: 0;
+  padding-top: 0;
+  margin-top: 0;
+  list-style: none;
+  overflow: hidden;
+  text-align: right;
+  margin-bottom: 22px;
+  text-align: center;
+  transition: all .4s ease-out;
+  height: 100%;
+
+}
+nav ul li {
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  margin-left: 35px;
+  line-height: 1.5;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5px;
+  background: tomato;
+  transition: background 3s;
+  box-shadow: 2px 2px 10px -2px rgba(0,0,0,.35);
+}
+
+nav ul li:hover {
+  background: mediumorchid;
+  transition: background .45s;
+}
+
+nav ul a {
+  display: block;
+  color: ivory;
+  text-transform: lowercase;
+  font-size: 18px;
+  font-weight: 200;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.videoback {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:-1;
+}
+
+
+
+
+
+@font-face {
+		font-family: 'Sucrose Bold Two';
+		src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2') format('woff2');
+		}
+@font-face {
+    font-family: 'IM Fell French Canon Pro';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/im-fell-french-canon-pro.woff2') format('woff2');
+}
+* {
+  box-sizing: border-box;
+}
+body {
+
+  margin: auto;
+}
+
+header {
+
+	padding-top: 45.93333333%;
+	background-size: cover;
+  color: #f2edd7;
+
+  font-family: 'Sucrose Bold Two';
+}
+header img {
+	position: absolute;
+	top: 49%;
+	left: 49%;
+	width: 71.8%;
+}
+header h1 {
+	position: fixed;
+	top: 2rem;
+	right: 1rem;
+  font-size: 12vw;
+  line-height: .8;
+  margin-top: 0;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+
+}
+header h1 span {
+  display: block;
+  font-size: 8.75vw;
+}
+main {
+  background-image: url("https://images.pexels.com/photos/5855578/pexels-photo-5855578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  position: relative;
+
+  font-family: 'IM Fell French Canon Pro';
+  font-size: 1.4rem;
+  padding: 2rem 15%;
+  line-height: 1.2;
+  height: 150px;
+  margin-top: 30px;
+  width: 2000;
+}
+@media all and (max-width: 400px) {
+  main { padding: 2rem; }
+}
+
+
+
+.bgpage1 {
+    margin-top: 70%;
+    height: 336px;
+    background-image: url(http://www.witcreative.info/img/bg_001.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: auto;
+    position: relative;
+    z-index: 100;
+
+
+}
+
+.bgpage2 {
+  position: relative;
+  height: 1273px;
+  margin-top: -215px;
+  background-image: url(http://www.witcreative.info/img/bg_002.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+
+
+}
+
+.bgpage3 {
+
+      position: relative;
+      height: 1145px;
+      margin-top: -950px;
+      background-image: url(http://www.witcreative.info/img/bg_003.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+      width: auto;
+
+}
+
+.bgpage4 {
+    position: relative;
+    height: 986px;
+    margin-top: -228px;
+    background-image: url(http://www.witcreative.info/img/bg_004.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+#background-wrapper {
+    position: absolute;
+    top: 0;
+    min-width: 960px;
+    width: 100%;
+    z-index: -1;
+
+}
+
+
+
+
+
+
+.container {
+  margin-top: 75%;
+  position: relative;
+  width: 490px;
+  height: 500px;
+  margin-left: 19%;
+}
+
+.image {
+  display: block;
+  width: 490px;
+  height: 500px;
+
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 490px;
+  height: 500px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:#b2bb9e;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 24px;
+  font-family: Palatino Linotype;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 500px;
+  width: 490px;
+  background-color: #000000;
+  color: #ffffff;
+
+
+
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -40px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  background: black;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  height: 500px;
+  width: 500px;
+
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+
+
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdf9fd;
+    color: white;
+    font: 16px/1.25 'Raleway', sans-serif;
+
+
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80em;
+}
+
+#container-2 {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1em;
+    width: 100%;
+    text-align: left;
+    margin-top: 47%;
+    position: absolute;
+    margin-left: 120px;
+
+}
+
+h3 {
+    animation: text-shadow 1.5s ease-in-out infinite;
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 1;
+
+}
+
+h3:hover {
+    animation-play-state: paused;
+}
+
+a {
+    color: #3b3a30;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@keyframes text-shadow {
+    0% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #d5f4e6,
+            0 0 0 #618685,
+            0 0 0 #80ced6,
+            0 0 0 #f0f0f0;
+    }
+
+    20% {
+        transform: translateY(-1em);
+        text-shadow:
+            0 0.125em 0 #d5f4e6,
+            0 0.25em 0 #618685,
+            0 -0.125em 0 #80ced6,
+            0 -0.25em 0 #f0f0f0;
+    }
+
+    40% {
+        transform: translateY(0.5em);
+        text-shadow:
+            0 -0.0625em 0 #d5f4e6,
+            0 -0.125em 0 #618685,
+            0 0.0625em 0 #80ced6,
+            0 0.125em 0 #f0f0f0;
+    }
+
+   60% {
+        transform: translateY(-0.25em);
+        text-shadow:
+        0 -0.0625em 0 #d5f4e6,
+        0 -0.125em 0 #618685,
+        0 0.0625em 0 #80ced6,
+        0 0.125em 0 #f0f0f0;
+
+    }
+
+    80% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #d5f4e6,
+            0 0 0 #618685,
+            0 0 0 #80ced6,
+            0 0 0 #f0f0f0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+
+}
+
+.header-1{
+  text-align: center;
+  padding: 30px;
+  background-image: url("https://images.pexels.com/photos/7193653/pexels-photo-7193653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  color: #618685;
+}
+
+.row-1 {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  background: white;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-1 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+
+}
+
+.column-1 img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column-1 {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-1 {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+.snip1574 {
+  font-family: 'Lato', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 250px;
+  max-width: 310px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  background: black;
+}
+
+.snip1574 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.snip1574 img {
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.7;
+}
+
+.snip1574 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 80px 10% 15%;
+}
+
+.snip1574 figcaption:before {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 170px;
+  opacity: 0.35;
+  font-style: normal;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0px;
+  left: 50%;
+}
+
+.snip1574 blockquote {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.snip1574 h3 {
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 3px 0;
+}
+
+.snip1574 h5 {
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  color: #bbb;
+  letter-spacing: 1px;
+}

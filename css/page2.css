@@ -1,0 +1,153 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  color: #ffffff;
+  overflow-x: hidden;
+  background: #25332e;
+}
+
+a {
+  transition: all 0.2s;
+}
+
+footer a:link, footer a:visited {
+	color: #FFF;
+}
+.tm-text-blue {
+  color: #00ccfc;
+}
+
+.tm-main-container {
+  position: relative;
+  height: 100%;
+  width: 1000px;
+}
+
+.tm-top-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+
+.tm-bg-dark {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.tm-site-header-box {
+  display: inline-block;
+  padding: 40px 80px 40px 40px;
+  margin: 40px 40px 100px;
+}
+
+.tm-site-title {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+}
+
+.tm-site-subtitle {
+  color: #cdffd0;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.tm-content {
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: flex-end;
+  width: 1000px;;
+}
+
+.tm-section {
+  margin-right: 75px;
+  max-width: 100%;
+}
+
+.tm-section-title {
+  font-size: 3.4rem;
+  margin-left: 40px;
+  text-transform: uppercase;
+}
+
+.tm-textbox {
+  padding: 45px;
+  font-size: 1.1rem;
+  color: #c5c7c6;
+  line-height: 1.8;
+}
+
+.tm-textbox-2 {
+  padding: 60px 40px 60px;
+}
+
+.tm-section-0 {
+  margin-top: 70px;
+  max-width: 1005px;
+  margin-left: 100px;
+}
+.tm-section-1 {
+  margin-top: 70px;
+  max-width: 420px;
+}
+
+.tm-link:link,
+.tm-link:visited {
+  background-color: white;
+  padding: 15px 30px;
+  color: black;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 25px;
+}
+
+.tm-link:focus,
+.tm-link:hover {
+  text-decoration: none;
+  color: #950000;
+}
+
+.tm-bottom-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.tm-bottom-container.non-sticky {
+  position: static;
+}
+
+.tm-barcode-box {
+  margin-bottom: 30px;
+  margin-left: 95px;
+}
+
+footer {
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-left: 40px;
+  font-size: 0.95rem;
+  margin-right: 40px;
+  line-height: 2;
+}
+
+
+
+
+
+
+.userVideo{
+
+     position: absolute;
+  height:auto;
+     width: 2000;
+     z-index: -1;
+}

@@ -1,0 +1,55 @@
+<html>
+<body>
+<h1>CSS 3D FLIP BOX</h1>
+<h3>Flipping content to a div (Transitions and 3D Transforms)</h3>
+
+<div class="wrapper">
+      <div class="col_third">
+        <div class="hover panel">
+          <div class="front">
+            <div class="box1">
+              <p>Front Side</p>
+            </div>
+          </div>
+          <div class="back">
+            <div class="box2">
+              <p>Back Side</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="col_third">
+        <div class="hover panel">
+          <div class="front">
+            <div class="box1">
+              <p>Front Side</p>
+            </div>
+          </div>
+          <div class="back">
+            <div class="box2">
+              <p>Back Side</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="col_third end">
+        <div class="hover panel">
+          <div class="front">
+            <div class="box1">
+              <p>Front Side</p>
+            </div>
+          </div>
+          <div class="back">
+            <div class="box2">
+              <p>Back Side</p>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+   </body>
+
+</html>
