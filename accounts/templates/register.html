@@ -1,0 +1,80 @@
+{% load static %}
+<html>
+
+<link rel="stylesheet" href="{% static './css/signup.css' %}">
+
+<head>
+  <video playsinline autoplay muted loop poster class="videoback">
+  <source src="{% static './vids/Pexels Videos 2261335.mp4' %}" type="video/webm">
+  </video>
+</head>
+
+
+<body>
+  <form action="register" method="POST">
+    {% csrf_token %}
+
+  <div class="cont_centrar">
+
+  <div class="cont_login">
+    
+<div class="cont_info_log_sign_up">
+      <div class="col_md_login">
+
+  </div>
+<div class="col_md_sign_up">
+<div class="cont_ba_opcitiy">
+  <h2>SIGN UP</h2>
+
+  <fieldset>
+    <br><br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="first_name">
+
+    <label for="name">Username:</label>
+    <input type="text" id="name" name="user_name">
+
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="user_password">
+
+    <label for="password">Re-enter password:</label>
+    <input type="password" id="password" name="user_password1">
+  </fieldset>
+<button class="btn_login" onclick="cambiar_login()">Sign Up</button>
+</div>
+  </div>
+       </div>
+
+
+    <div class="cont_back_info">
+
+
+    </div>
+<div class="cont_forms">
+    <div class="cont_img_back_">
+       <img src="https://images.pexels.com/photos/4644397/pexels-photo-4644397.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+       </div>
+ <div class="cont_form_login">
+<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
+
+
+  </div>
+
+    </div>
+
+  </div>
+ </div>
+</form>
+
+
+<div>
+  {% for message in messages %}
+  <h3>{{messages}}</h3>
+  {% endfor %}
+</div>
+</body>
+
+</html>

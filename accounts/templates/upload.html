@@ -1,0 +1,62 @@
+{% load static %}
+
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'css2/upload.css' %}"> 
+
+    <video playsinline autoplay muted loop poster class="videoback">
+        <source src="{% static 'vids/rain.mp4'%}" type="video/webm">
+    </video>
+
+
+    
+
+</head>
+<body>
+
+    <div class="main">
+    <div class="bg-text">
+    <h1 style="text-align: center;">Upload your book</h1>
+    <div class="container">
+      
+        <form action="." method="post"  enctype="multipart/form-data">
+            
+            {% csrf_token %}
+            {{form.as_p}}
+            
+        
+            <button type="submit" class="btn btn-lg btn-success" id="button2">Upload</button>
+        </form>
+       
+        {% if obj %}
+        <h3>Find your cupon on your email after we evaluate your upload : {{img_obj.caption}}</h3>
+        <div class="after">
+        <img src="{{ obj.image.url}}" alt="image" class="img-thumbnail"  > <a href="{% url 'index' %}" style="color:white"> Request the upload </a></li>
+        </div>
+                
+                
+                
+        {% endif %}
+        
+
+      
+        
+        {% if forloop.first %}<div class="row ">{% endif %}
+            <div class="col-lg-4 col-md-4 col-12" >
+        <div class="text-center mt-2">
+            
+            <h2 class="text-center" >{{x.caption}}</h2></div>
+            </div>
+            
+        </div>
+        <div class=row>
+        
+            {% if forloop.last %}</div>{% endif %}
+    
+        
+
+    </div>
+</div>
+    </div>
+</body>

@@ -1,0 +1,61 @@
+
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css2/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css2/search.css' %}">
+</head>
+<body>
+  <video playsinline autoplay muted loop poster class="videoback" style="z-index: -1;">
+    <source src="{% static 'vids/real.mp4'%}" type="video/webm">
+  </video>
+
+
+
+
+  <div class="example" style="z-index: 10;">
+      <form action="{% url 'search_result' %}" method="GET" value="{{request.GET.q}}">
+          Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search posts"/>
+          <input type="submit" name="submit" value="Search" id="button2" >
+    
+    </form>
+    </div>
+
+
+{% if submitbutton == 'Search' and request.GET.q != '' %}
+{% if results %}
+<div class="container">
+<div class="row">
+<div class="owl-carousel owl-theme">
+<div class="response" style="text-align:center">
+  
+<h1>Results for <b>{{ request.GET.q }}</b></h1>
+<br/><br/>
+
+{% for result in results %}
+<div item >
+ <div class="product_blog_img"  style="flex-direction: row-reverse;" >
+  <div style="display:-webkit-box;"  >
+<img src="{{ result.image.url }}">
+<br/>
+{{result.name}}
+<br/>
+<button data-product="{{result.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+<a class="btn btn-outline-success" href="#">View</a>
+<h4 style="display: inline-block; float: right"><strong>{{ result.price|floatformat:2 }}</strong></h4>
+</div>
+
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% else %}
+No search results for this query
+{% endif %}
+{% endif %}
+
+
+</body>
